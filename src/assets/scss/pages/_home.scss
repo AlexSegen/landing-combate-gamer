@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.cg {
+
+    &__section {
+        padding: 30px 0;
+        &.__home {
+            padding-top: 5px;
+        }
+
+        &-content {
+            font-size: 1rem;
+            line-height: 1.8rem;
+            padding: 20px;
+        }
+
+        &-title {
+            font-size: 3rem;
+            line-height: 3.2rem;
+            font-weight: 800;
+            font-family: $text-header-stack;
+            text-transform: uppercase;
+            margin: 0 0 25px;          
+            letter-spacing: -1px;
+
+            &.__align {
+                border-left: 10px dotted var(--primary);
+                padding-left: 20px;
+            }
+
+            small {
+                font-weight: normal;
+                font-size: 1rem;
+                line-height: 3rem;
+            }
+        }
+    }
+}

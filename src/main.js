@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+
+import CombateGamer from "./plugins/CombateGamer";
+Vue.use(CombateGamer);
+
 new Vue({
   router,
   store,

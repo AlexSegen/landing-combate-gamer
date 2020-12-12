@@ -1,0 +1,121 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.cg {
+  &__header {
+    color: #fff;
+    background: $dark-300;
+
+    &-top {
+      color: #ccc;
+      padding: 10px;
+      font-size: 0.8rem;
+      border-bottom: 1px solid rgba(204, 204, 204, 0.07);
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &-actions {
+      .btn {
+        color: #fff;
+        font-size: 0.8rem;
+        padding: 4px 15px;
+      }
+    }
+
+    &-sn {
+      a {
+        width: 25px;
+        height: 25px;
+        color: #fff;
+        font-size: 1rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary;
+        margin: 0 4px;
+        border-radius: 2px;
+        text-decoration: none;
+        transition: all ease-in-out 0.05s;
+
+        &:focus,
+        &:hover {
+          text-decoration: none;
+          background: darken($primary, 5%);
+        }
+      }
+    }
+
+    &-bottom {
+      padding: 10px;
+
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &-nav {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      &:first-child {
+        text-align: right;
+      }
+
+      > li {
+        display: inline-block;
+        vertical-align: middle;
+        a {
+          color: #fff;
+          display: block;
+          font-size: 0.8rem;
+          padding: 8px 15px;
+          text-decoration: none;
+
+          &:after {
+            border-bottom: 2px solid #3ea9be;
+            content: "";
+            display: block;
+            margin: 0.25em auto 0;
+            transition: width 250ms ease-in-out 0s;
+            width: 0;
+          }
+
+          &:hover,
+          &:focus {
+            color: $primary;
+            &:after {
+              transition: width 100ms ease-in-out 0s;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-brand {
+      max-width: 220px;
+      padding: 0 20px;
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+
+      a {
+        display: block;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
