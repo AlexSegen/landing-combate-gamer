@@ -5,6 +5,10 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 import VuePaginate from "vue-paginate";
 
+//Vendors
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 //css assets
 import "bootstrap/dist/css/bootstrap.css";
 import "@/assets/scss/main.scss";

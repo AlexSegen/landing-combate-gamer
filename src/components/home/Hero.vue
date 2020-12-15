@@ -27,19 +27,17 @@
     </div>
 </template>
 <script>
-import Slick from 'vue-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 export default {
     name: "Hero",
-    components: { Slick },
      data() {
         return {
             slickOptions: {
                 slidesToShow: 1,
                 arrows: false,
                 centerMode: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
                 centerPadding: '60px',
                /*  responsive: [
                     {

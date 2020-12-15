@@ -64,3 +64,91 @@ export const lastMatches = [
         }
     }
 ]
+
+export const TopGames = [
+    {
+        name: "League of Legends",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Counter Strike GO",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "COD MW Warzone",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Valorant",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Dota 2",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Fornite",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Magic",
+        platform: "PC",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    //Móvil
+    {
+        name: "Brawl Stars",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Clash Royale",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Mobile Legends",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "COD Mobile",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "FreeFire",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Arena of Valor",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+    {
+        name: "Pubg Mobile",
+        platform: "Móvil",
+        media: "http://placehold.it/200x200",
+        metas: null
+    },
+]
