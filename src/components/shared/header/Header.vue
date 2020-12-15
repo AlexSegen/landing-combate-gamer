@@ -21,7 +21,7 @@
                     <button
                     class="cg__header-mobile-btn"
                     type="button"
-                    v-on-clickaway="toggleNav"
+                    v-on-clickaway="isOpen = false"
                     @click="toggleNav" 
                     :class="{'__isOpen': isOpen}">
                         {{ isOpen ? "&times;" : "&equiv;" }}
