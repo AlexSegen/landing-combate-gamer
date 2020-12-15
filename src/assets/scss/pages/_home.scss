@@ -34,5 +34,27 @@
                 line-height: 3rem;
             }
         }
+
+
+        @media(max-width: 767px) {
+            &-content {
+                padding: 10px;
+            }
+
+            &-title {
+                font-size: 2rem;
+                line-height: 2.5rem;
+                margin: 0 0 15px;
+    
+                &.__align {
+                    padding-left: 10px;
+                }
+    
+                small {
+                    font-size: .8rem;
+                    line-height: 2rem;
+                }
+            }
+        }
     }
 }

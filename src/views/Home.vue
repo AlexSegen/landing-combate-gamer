@@ -81,7 +81,7 @@ export default {
       width: 80px;
       height: 80px;
       display: inline-block;
-      margin: 0 10px;
+      margin: 10px;
       border-radius: 100%;
     }
     

@@ -97,7 +97,7 @@ export const TopGames = [
         metas: null
     },
     {
-        name: "Fornite",
+        name: "Fortnite",
         platform: "PC",
         media: "/img/tg/pc/fornite.jpg",
         metas: null

@@ -47,7 +47,24 @@ export default {
 .cg {
   &__matches {
     max-width: 900px;
-    margin: 50px auto;
+    position: relative;
+    margin: 10px auto 50px;
+    padding-top: 150px;
+
+    &:after {
+      content: "";
+      background-image: url(/img/fortnite-character.png);
+      background-position: top;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: 0.2;
+      background-repeat: no-repeat;
+    }
 
     &-item {
       display: flex;
@@ -66,6 +83,11 @@ export default {
       margin: 0 auto;
       width: 50px;
       height: 50px;
+      
+      @media(max-width: 767px) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &-media {
@@ -83,6 +105,11 @@ export default {
         &.__right {
           left: unset;
           right: 20px;
+        }
+
+        @media(max-width: 767px) {
+          width: 60px;
+          height: 60px;
         }
     }
     
@@ -132,9 +159,19 @@ export default {
       }
 
       > span {
-        font-family: var(--text-header-stack);
+        width: 94%;
         display: block;
+        font-family: var(--text-header-stack);
         text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+
+      @media(max-width: 767px) {
+        font-size: .8rem;
+        padding: 10px 10px;
       }
     }
   }

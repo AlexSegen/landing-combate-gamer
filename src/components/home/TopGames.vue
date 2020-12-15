@@ -135,13 +135,16 @@ export default {
             max-width: 300px;
             padding: 15px;
             margin: 20px 0;
-            background: #102222;
+            background: rgba(#102222, .7);
             transition: all ease-in-out .2s;
             box-shadow: 0 15px 15px rgba(0,0,0,0.2);
+            opacity: .7;
+            clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));
             -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
             &:hover, &:focus {
+                background: rgba(#102222, 1);
                 transform: translateY(-10px);
             }
 
@@ -157,18 +160,26 @@ export default {
                         font-weight: 800;
                         text-transform: uppercase;
                         font-size: 1.2rem;
-                        margin: 15px 0;
                         width: 90%;
+                        margin: 15px auto;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+
+                        @media(max-width: 767px) {
+                            font-size: 1rem;
+                        }
                     }
                     &-media {
+                        margin: 10px 0;
+
                         img {
-                            max-width: 100%;
+                            max-width: 150px;
                             height: auto;
                             display: block;
                             margin: 0 auto;
+                            border-radius: 5px;
+                            box-shadow: 0 10px 10px rgba(0, 20, 21, .46);
                         }
                     }
                 }
