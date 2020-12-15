@@ -4,12 +4,14 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="cg__section-content" :class="{'text-center': isCentered}">
-                    <h2 class="cg__section-title"> 
+                    <h2 v-if="title" class="cg__section-title"> 
                         
                         <template> <small v-if="subtitle" class="text-primary">{{subtitle}}</small> <br> </template>
                         
                         {{title}}
                     </h2>
+
+                    <slot name="title"></slot>
 
                     <slot name="description"></slot>
 

@@ -4,13 +4,14 @@
 
     <Hero/>
 
-    <section class="cg__section cg__section __home">
-        <div class="container">
+    <section-layout >
+      <template v-slot:title>
+          <h2 class="cg__section-title __align"><small>Bienvenido a <strong class="text-primary">Combate Gamer</strong></small> <br>
+                ¿De qué trata?</h2>
+      </template>
+      <template v-slot:description>
           <div class="row">
             <div class="col-sm-6">
-              <div class="cg__section-content">
-                <h2 class="cg__section-title __align"><small>Bienvenido a <strong class="text-primary">Combate Gamer</strong></small> <br>
-                ¿De qué trata?</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, at numquam. Facere repudiandae at dolor atque quisquam, consectetur laborum animi quae assumenda vel illo obcaecati debitis quia nostrum, rerum hic.</p>
 
                 <div class="cg__plus">
@@ -22,16 +23,13 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit illum omnis! Officiis est itaque nisi.</p>
 
                 <p class="text-right"><a class="btn cg-btn is-secondary has-shadow" href="#">Saber más</a></p>
-              </div>
             </div>
             <div class="col-sm-6">
-              <div class="cg__section-content">
-                <img class="cg__splash" src="@/assets/img/home/logo-splash.png" alt="Combate Gamer">
-              </div>
+                <img class="cg__splash p-2" src="@/assets/img/home/logo-splash.png" alt="Combate Gamer">
             </div>
           </div>
-        </div>
-    </section>
+      </template>
+    </section-layout>
 
 
     <section-layout title="Top Juegos" subtitle="Los más populares" :isCentered="true" :containerFluid="true">

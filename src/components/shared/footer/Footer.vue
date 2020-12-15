@@ -2,8 +2,7 @@
     <footer class="cg__footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6"></div>
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="cg__footer-content">
                         &copy; <span>Combate Gamer</span> , 2019 - {{ (new Date()).getFullYear()}}
                     </div>
