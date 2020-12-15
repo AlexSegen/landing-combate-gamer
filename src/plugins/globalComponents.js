@@ -8,6 +8,7 @@ const GlobalComponents = {
   install(Vue) {
     Vue.component("Spinner", Spinner);
     Vue.component("Header", Header);
+    Vue.component("Footer", Footer);
     Vue.component("Slick", Slick);
   }
 };

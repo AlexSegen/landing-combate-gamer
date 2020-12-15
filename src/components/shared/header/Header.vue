@@ -21,7 +21,7 @@
                     <button
                     class="cg__header-mobile-btn"
                     type="button"
-                    v-on-clickaway="isOpen = false"
+                    v-on-clickaway="closeNav"
                     @click="toggleNav" 
                     :class="{'__isOpen': isOpen}">
                         {{ isOpen ? "&times;" : "&equiv;" }}
@@ -66,6 +66,9 @@ export default {
     methods: {
         toggleNav() {
             this.isOpen = !this.isOpen;
+        },
+        closeNav() {
+            this.isOpen = false;
         }
     }
 
