@@ -36,7 +36,7 @@
 
     <section-layout title="Top Juegos" subtitle="Los más populares" :isCentered="true" :containerFluid="true">
       <template v-slot:description>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quas sit sapiente ipsum. Ea maxime, omnis consectetur ipsum, eligendi temporibus a perferendis facere necessitatibus ducimus incidunt enim alias atque vel.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quas sit sapiente ipsum. Ea maxime, omnis consectetur ipsum. <br/> Eligendi temporibus a perferendis facere necessitatibus ducimus incidunt enim alias atque vel.</p>
       </template>
       <template v-slot:component>
         <TopGames/>

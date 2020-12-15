@@ -24,6 +24,9 @@
                         <div class="tg__item-metas">
 
                         </div>
+                        <div class="tg__item-actions">
+                            <a href="#" class="btn btn-outline-primary">Crear partida</a>
+                        </div>
                     </div>
                 </slick>
                 <button @click="$refs.slick.prev()"   type="button" class="cg__slick-arrow __prev"><i class="zmdi zmdi-chevron-left zmdi-hc-fw arrow-ico"></i> Anterior </button>
@@ -53,6 +56,12 @@ export default {
                 centerMode: true,
                 centerPadding: '60px',
                 responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
                     {
                         breakpoint: 768,
                         settings: {
@@ -100,7 +109,7 @@ export default {
             padding: 20px 0;
         }
         &-tabs {
-            padding: 30px;
+            padding: 30px 0 10px;
         }
         &-tab {
             background: #102222;
@@ -116,6 +125,10 @@ export default {
             border-bottom: 2px solid #102222;
             &.__active {
                 border-bottom: 2px solid var(--primary);
+            }
+
+            @media(max-width: 500px) {
+                font-size: 1rem;
             }
         }
         &-item {
@@ -145,6 +158,10 @@ export default {
                         text-transform: uppercase;
                         font-size: 1.2rem;
                         margin: 15px 0;
+                        width: 90%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     &-media {
                         img {
