@@ -5,16 +5,68 @@
   &__header {
     color: #fff;
     background: $dark-300;
+    @media (max-width: 768px) {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+
+    &-mobile {
+      display: none;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      
+      &-brand {
+        display: block;
+        width: 100%;
+        img {
+          height: 30px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      &-btn {
+        color: #fff;
+        font-size: 2rem;
+        width: 55px;
+        height: 45px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $dark-100;
+        border: 1px solid $dark-100;
+        outline: none;
+        
+        &.__isOpen {
+          background: $primary;
+          border: 1px solid $primary;
+        }
+      }
+
+      @media(max-width: 768px) {
+        display: flex!important;
+      }
+    }
 
     &-top {
       color: #ccc;
       padding: 10px;
       font-size: 0.8rem;
+      z-index: 1;
+      position: relative;
+      background: $dark-300;
       border-bottom: 1px solid rgba(204, 204, 204, 0.07);
       &-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+ 
       }
     }
 
@@ -23,6 +75,10 @@
         color: #fff;
         font-size: 0.8rem;
         padding: 4px 15px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
       }
     }
 
@@ -47,15 +103,47 @@
           background: darken($primary, 5%);
         }
       }
+
+      @media (max-width: 768px) {
+        span {
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
     }
 
     &-bottom {
       padding: 10px;
+      overflow: hidden;
 
       &-container {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media(max-width: 768px) {
+          display: block;
+        }
+      }
+
+      @media(max-width: 768px) {
+        position: fixed;
+        padding-top: 80px;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 0;
+        z-index: 0;
+        background: $dark-100;
+        transform: translateX(-5000px);
+
+        &.__isOpen {
+          width: 95%;
+          bottom: 0;
+          transform: translateX(0);
+          webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
       }
     }
 
@@ -97,6 +185,22 @@
           }
         }
       }
+
+      @media(max-width: 768px) {
+
+        &:first-child {
+          text-align: left;
+        }
+
+        > li { 
+          text-align: left;
+          display: block;
+          a {
+            font-size: 1rem;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
 
     &-brand {
@@ -116,6 +220,72 @@
           margin: 0 auto;
         }
       }
+
+      @media(max-width: 768px) {
+        display: none;
+      }
     }
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-out-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
   }
 }
