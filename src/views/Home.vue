@@ -42,12 +42,23 @@
     </section-layout>
 
 
-    <section-layout title="Últimas Partidas" subtitle="Todas las plataformas" :isCentered="true">
+    <section-layout title="Últimas Partidas" subtitle="Todas las plataformas" :isCentered="true" >
       <template v-slot:description>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, at numquam. Facere repudiandae at dolor atque quisquam, consectetur laborum animi quae assumenda vel illo obcaecati debitis quia nostrum, rerum hic.</p>
       </template>
       <template v-slot:component>
         <LastMatches/>
+      </template>
+    </section-layout>
+
+
+    <section-layout :containerFluid="true">
+      <template v-slot:title>
+          <h2 class="cg__section-title text-center"><small>Novedades en <strong class="text-primary">Combate Gamer</strong></small> <br>
+                Últimas noticias</h2>
+      </template>
+      <template v-slot:component>
+        <LastNews />
       </template>
     </section-layout>
     
@@ -57,15 +68,16 @@
 </template>
 
 <script>
-import Hero from '@/components/home/Hero.vue'
-import LastMatches from '@/components/home/LastMatches.vue'
-import TopGames from '@/components/home/TopGames.vue'
-import SectionLayout from '@/components/home/SectionLayout.vue'
+import Hero from '@/components/home/Hero'
+import TopGames from '@/components/home/TopGames'
+import LastNews from '@/components/home/LastNews'
+import LastMatches from '@/components/home/LastMatches'
+import SectionLayout from '@/components/home/SectionLayout'
 
 export default {
   name: 'Home',
   components: {
-    Hero, LastMatches, SectionLayout, TopGames
+    Hero, LastMatches, SectionLayout, TopGames, LastNews
   }
 }
 </script>
