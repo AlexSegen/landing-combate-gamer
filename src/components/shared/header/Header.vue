@@ -2,7 +2,7 @@
     <header class="cg__header">
         <div class="cg__header-top">
             <div class="container cg__header-top-container">
-                <SocialNetwork :hideForMobile="true"/>
+                <SocialNetwork :hideOnMobile="true"/>
                 <div class="cg__header-actions">
                     <a class="btn btn-link" href="#">
                         <i class="zmdi zmdi-account-circle zmdi-hc-fw __icon"></i>
@@ -15,8 +15,11 @@
                 </div>
 
                 <div class="cg__header-mobile" style="display: none">
+                    <a href="#" class="cg__header-mobile-btn" type="button">
+                        <i class="zmdi zmdi-account-circle text-primary"></i>
+                    </a>
                     <a class="cg__header-mobile-brand" href="#">
-                        <img src="@/assets/img/cg-logo.png" alt="Combate Gamer">
+                        <img src="@/assets/img/logo-gc.png" alt="Combate Gamer">
                     </a>
                     <button
                     class="cg__header-mobile-btn"
@@ -38,7 +41,7 @@
                 </ul>
                 <div class="cg__header-brand">
                     <a href="#">
-                        <img class="cg__header-brand-logo" src="@/assets/img/cg-logo.png" alt="Combate Gamer">
+                        <img class="cg__header-brand-logo" src="@/assets/img/logo-gc.png" alt="Combate Gamer">
                     </a>
                 </div>
                 <ul class="cg__header-nav">
@@ -46,6 +49,7 @@
                     <li><a href="#">Top Jugadores</a></li>
                     <li><a href="#">Ranking General</a></li>
                 </ul>
+                <SocialNetwork :showOnMobile="true"/>
             </div>
         </div>
     </header>

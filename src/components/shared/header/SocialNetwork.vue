@@ -1,5 +1,5 @@
 <template>
-    <div class="cg__header-sn" :class="{ '__isMobile': hideForMobile}">
+    <div class="cg__header-sn" :class="{ 'hideOnMobile': hideOnMobile, 'showOnMobile': showOnMobile}" >
         <span>Síguenos en</span>
         <a href="#"><i class="zmdi zmdi-facebook"></i></a>
         <a href="#"><i class="zmdi zmdi-twitter"></i></a>
@@ -10,7 +10,7 @@
 <script>
 export default {
     name: "SocialMetwork",
-    props: ["hideForMobile"]
+    props: ["hideOnMobile", "showOnMobile"]
 
 }
 </script>
@@ -18,9 +18,19 @@ export default {
 
 .cg__header-sn {
 
+    &.hideOnMobile {
+        display: block;
+    }
+    &.showOnMobile {
+        display: none;
+    }
+
     @media(max-width: 768px) {
-        &.__isMobile {
+        &.hideOnMobile {
             display: none;
+        }
+        &.showOnMobile {
+            display: block;
         }
     }
 }
