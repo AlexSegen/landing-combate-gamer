@@ -1,5 +1,5 @@
 <template>
-    <header id="top" class="cg__header" :class="{ '__isSmall': isScrolling}">
+    <header class="cg__header" :class="{ '__isSmall': isScrolling}">
         <div class="cg__header-top">
             <div class="container cg__header-top-container">
                 <SocialNetwork :hideOnMobile="true"/>

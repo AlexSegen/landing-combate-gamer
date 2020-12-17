@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="top">
     <Header/>
     <router-view/>
     <GoTop/>

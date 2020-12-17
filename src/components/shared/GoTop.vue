@@ -51,7 +51,24 @@ export default {
         text-decoration: none;
         cursor: pointer;
         -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            
+        @media(max-width: 768px) {
+            padding: 5px 5px;
+            bottom: 30px;
+            right: 10px;
+
+            i {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+
+            span {
+                font-size: .6rem;
+                line-height: 1rem;
+                display: none;
+            }
+        }
 
         &:hover, &:focus {
             opacity: 1;
