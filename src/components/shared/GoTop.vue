@@ -41,7 +41,7 @@ export default {
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom: 80px;
+        bottom: 40px;
         right: 50px;
         z-index: 2;
         background: var(--gray-dark);

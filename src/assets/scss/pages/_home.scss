@@ -3,15 +3,24 @@
 // -----------------------------------------------------------------------------
 .cg {
     &__section {
-        padding: 20px 0;
+        padding: 50px 0;
+        
+        @media(max-width: 768px) {
+            padding: 20px 0;
+        }
+        
         &.__home {
             padding-top: 5px;
         }
 
         &-content {
-            font-size: 1rem;
-            line-height: 1.8rem;
+            font-size: 1.3rem;
+            line-height: 2rem;
             padding: 20px;
+            @media(max-width: 768px) {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
         }
 
         &-title {
@@ -59,10 +68,14 @@
 
 
         &-tp {
-            background-size: 100%;
+            background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
-            background-image: url('/img/bg/global-alt.jpg');
+            background-image: url('/img/bg/global-alt-black.jpg');
+        }
+
+        &-tg {
+            padding-bottom: 50px;
         }
     }
 }

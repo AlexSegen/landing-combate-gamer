@@ -1,9 +1,8 @@
 <template>
     <div class="cg__tp">
-        <div class="row">
+        <div class="row p-0">
             <div class="col-sm-6">
                 <div class="cg__tp-grid">
-
                     <div v-for="(p, index) in players" :key="'players'+index" class="tp__item">
                         <div class="tp__item-position">{{index + 1}}</div>
                         <div class="tp__item-box">
@@ -19,12 +18,16 @@
                             </div>
                         </div>
                     </div>
+                </div>  
+            </div>
 
-
+            <div class="col-sm-6">
+                <div class="cg__tp-champion">
+                    <img src="@/assets/img/champion.png" alt="">
+                    <a href="#" class="btn cg-btn is-primary has-shadow">VER RANKING GLOBAL</a>
                 </div>
             </div>
         </div>
-        
     </div>
 </template>
 <script>
@@ -43,23 +46,34 @@ export default {
 <style lang="scss" scoped>
 .cg {
     &__tp {
-        margin: 50px 0;
+        margin: 40px 0 0;
+
+        &-champion {
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto 20px;
+                @media(max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
         
         .tp {
             &__item {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 10px;
                 position: relative;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
 
                 &-box {
                     display: flex;
                     width: 100%;
                     justify-content: space-between;
                     align-items: center;
-                    background: var(--dark-100);
+                    background: rgba(36, 40, 52, .35);
                     clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
                     box-shadow: 0 10px 10px rgba(17, 17, 17, 0.3);
 
@@ -79,7 +93,6 @@ export default {
                 }
                 &-player {
                     width: 100%;
-
                 }
                 &-details {
                     width: 100%;
@@ -100,7 +113,7 @@ export default {
                         text-align: left;
                         & > li {
                             color: #999;
-                            font-size: 1rem;
+                            font-size: .9rem;
                             display: inline-block;
                             margin-right: 25px;
                             position: relative;
@@ -146,8 +159,8 @@ export default {
                 @media(max-width: 768px) {
                     &-media {
                         img {
-                            width: 50px;
-                            height: 50px;
+                            width: 65px;
+                            height: 65px;
                         }
                     }
                     &-position {
@@ -161,11 +174,15 @@ export default {
                         }
                     }
 
-                    &-metas {
-                        & > li {
-                            font-size: .8rem;
+                    &-details {
+
+                        &-metas {
+                            & > li {
+                                font-size: .75rem;
+                            }
                         }
                     }
+
                 }
             }
         }

@@ -1,6 +1,10 @@
 <template>
 <div class="cg__news">
 
+    <div class="cg__news-tools">
+        <a href="#" class="btn btn-link text-white">Ver todas <i class="zmdi zmdi-arrow-right ml-1"></i></a>
+    </div>
+
     <div class="cg__news-grid">
         <a v-for="(item, index) in news" :key="'news_'+index" href="#" class="cg__news-item">
             <div class="cg__news-item-details">
@@ -12,10 +16,6 @@
             </div>           
             <img class="cg__news-item-media" :src="item.media" alt="">
         </a>
-    </div>
-
-    <div class="cg__news-tools">
-        <a href="#" class="btn btn-link text-white">Ver todas <i class="zmdi zmdi-arrow-right ml-1"></i></a>
     </div>
 
 </div>

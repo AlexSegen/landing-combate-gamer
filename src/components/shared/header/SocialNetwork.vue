@@ -31,6 +31,13 @@ export default {
         }
         &.showOnMobile {
             display: block;
+            margin-top: 20px;
+            
+            a {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
         }
     }
 }

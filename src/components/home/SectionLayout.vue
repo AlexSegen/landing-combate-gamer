@@ -1,5 +1,5 @@
 <template>
-<section :id="elementId" class="cg__section cg__section __home" :class="section">
+<section :id="elementId" class="cg__section cg__section " :class="section">
     <div :class="containerFluid ? 'container-fluid': 'container'">
         <div class="row">
             <div class="col-sm-12">

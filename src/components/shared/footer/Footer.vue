@@ -20,11 +20,11 @@ export default {
 .cg {
     &__footer {
         color: #ddd;
+        padding: 20px 10px;
         font-size: .9rem;
-        background: #111;
-        border-bottom: 1px solid #111;
-        padding: 10px;
+        background: var(--dark-300);
         text-align: center;
+        border-bottom: 1px solid var(--dark-300);
 
         span {
             color: var(--primary);

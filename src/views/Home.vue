@@ -4,7 +4,7 @@
 
     <Hero/>
 
-    <section-layout elementId="about" >
+    <section-layout elementId="about" section="__home-tp">
       <template v-slot:description>
           <div class="row">
             <div class="col-sm-6">
@@ -20,7 +20,7 @@
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit illum omnis! Officiis est itaque nisi.</p>
 
-                <p class="text-right"><a class="btn cg-btn is-secondary has-shadow" href="#">Saber más</a></p>
+                <!-- <p class="text-right"><a class="btn cg-btn is-secondary has-shadow" href="#">Saber más</a></p> -->
             </div>
             <div class="col-sm-6">
                 <img class="cg__splash p-2" src="@/assets/img/home/logo-splash.png" alt="Combate Gamer">
@@ -30,7 +30,7 @@
     </section-layout>
 
 
-    <section-layout elementId="top-games" title="Top Juegos" subtitle="Los más populares" :isCentered="true" :containerFluid="true">
+    <section-layout elementId="top-games" title="Top Juegos" subtitle="Los más populares" :isCentered="true" :containerFluid="true" section="cg__section-tg">
       <template v-slot:description>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quas sit sapiente ipsum. Ea maxime, omnis consectetur ipsum. <br/> Eligendi temporibus a perferendis facere necessitatibus ducimus incidunt enim alias atque vel.</p>
       </template>
