@@ -7,6 +7,10 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  @media (max-width: 768px) {
+    scroll-behavior: unset;
+  }
 }
 
 /**

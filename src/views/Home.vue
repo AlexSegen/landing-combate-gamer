@@ -4,7 +4,7 @@
 
     <Hero/>
 
-    <section-layout >
+    <section-layout elementId="about" >
       <template v-slot:title>
           <h2 class="cg__section-title __align"><small>Bienvenido a <strong class="text-primary">Combate Gamer</strong></small> <br>
                 ¿De qué trata?</h2>
@@ -32,7 +32,7 @@
     </section-layout>
 
 
-    <section-layout title="Top Juegos" subtitle="Los más populares" :isCentered="true" :containerFluid="true">
+    <section-layout elementId="top-games" title="Top Juegos" subtitle="Los más populares" :isCentered="true" :containerFluid="true">
       <template v-slot:description>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quas sit sapiente ipsum. Ea maxime, omnis consectetur ipsum. <br/> Eligendi temporibus a perferendis facere necessitatibus ducimus incidunt enim alias atque vel.</p>
       </template>

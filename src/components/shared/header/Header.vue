@@ -1,5 +1,5 @@
 <template>
-    <header class="cg__header">
+    <header id="top" class="cg__header" :class="{ '__isSmall': isScrolling}">
         <div class="cg__header-top">
             <div class="container cg__header-top-container">
                 <SocialNetwork :hideOnMobile="true"/>
@@ -35,9 +35,9 @@
         <div class="cg__header-bottom" :class="{'__isOpen': isOpen}">
             <div class="container cg__header-bottom-container">
                 <ul class="cg__header-nav">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">¿De qué trata?</a></li>
-                    <li><a href="#">Noticias</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/#about">¿De qué trata?</a></li>
+                    <li><a href="/noticias">Noticias</a></li>
                 </ul>
                 <div class="cg__header-brand">
                     <a href="#">
@@ -45,9 +45,9 @@
                     </a>
                 </div>
                 <ul class="cg__header-nav">
-                    <li><a href="#">Top Juegos</a></li>
-                    <li><a href="#">Top Jugadores</a></li>
-                    <li><a href="#">Ranking General</a></li>
+                    <li><a href="/#top-games">Top Juegos</a></li>
+                    <li><a href="/#top-players">Top Jugadores</a></li>
+                    <li><a href="/ranking-general">Ranking General</a></li>
                 </ul>
                 <SocialNetwork :showOnMobile="true"/>
             </div>
@@ -64,10 +64,24 @@ export default {
     mixins: [ clickaway ],
     data() {
         return {
-            isOpen: false
+            isOpen: false,
+            isScrolling: false
         }
     },
+    mounted() {
+        const _this = this;
+        window.onscroll = function() {
+            _this.detectScroll()
+        };
+    },
     methods: {
+        detectScroll() {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+                this.isScrolling = true;
+            } else {
+                this.isScrolling = false;
+            }
+        },
         toggleNav() {
             this.isOpen = !this.isOpen;
         },
