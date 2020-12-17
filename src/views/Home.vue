@@ -107,7 +107,7 @@ export default {
   }
 
   &__splash {
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
     display: block;
     margin: 0 auto;
