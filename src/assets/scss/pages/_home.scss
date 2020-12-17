@@ -56,5 +56,13 @@
                 }
             }
         }
+
+
+        &-tp {
+            background-size: 100%;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-image: url('/img/bg/global-alt.jpg');
+        }
     }
 }

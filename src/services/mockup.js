@@ -191,3 +191,36 @@ export const News = [
         meta: "Octubre 01, 2020"
     },
 ]
+
+export const TopPlayers = [
+    {
+        name: "PlayerA",
+        media: "/img/players/01.png",
+        wins: 85,
+        level: "Pro"
+    },
+    {
+        name: "PlayerZ",
+        media: "/img/players/02.png",
+        wins: 73,
+        level: "Pro"
+    },
+    {
+        name: "PlayerX",
+        media: "/img/players/03.png",
+        wins: 62,
+        level: "Legend"
+    },
+    {
+        name: "PlayerC",
+        media: "/img/players/04.png",
+        wins: 45,
+        level: "Pro"
+    },
+    {
+        name: "PlayerY",
+        media: "/img/players/05.png",
+        wins: 22,
+        level: "Explorer"
+    },
+]

@@ -40,6 +40,16 @@
     </section-layout>
 
 
+    <section-layout elementId="top-players" title="Top Jugadores" subtitle="Los mejores de CG" :isCentered="true" section="cg__section-tp">
+      <template v-slot:description>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda quas sit sapiente ipsum. Ea maxime.</p>
+      </template>
+      <template v-slot:component>
+        <TopPlayers/>
+      </template>
+    </section-layout>
+
+
     <section-layout title="Últimas Partidas" subtitle="Todas las plataformas" :isCentered="true" >
       <template v-slot:description>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, at numquam. Facere repudiandae at dolor atque quisquam, consectetur laborum animi quae assumenda vel illo obcaecati debitis quia nostrum, rerum hic.</p>
@@ -68,6 +78,7 @@
 <script>
 import Hero from '@/components/home/Hero'
 import TopGames from '@/components/home/TopGames'
+import TopPlayers from '@/components/home/TopPlayers'
 import LastNews from '@/components/home/LastNews'
 import LastMatches from '@/components/home/LastMatches'
 import SectionLayout from '@/components/home/SectionLayout'
@@ -75,7 +86,7 @@ import SectionLayout from '@/components/home/SectionLayout'
 export default {
   name: 'Home',
   components: {
-    Hero, LastMatches, SectionLayout, TopGames, LastNews
+    Hero, LastMatches, SectionLayout, TopGames, TopPlayers, LastNews
   }
 }
 </script>

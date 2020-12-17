@@ -80,7 +80,11 @@ $breakpoints: (
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
 
+
 :root { 
   --text-stack-stack: 'Open Sans', sans-serif;
   --text-header-stack: 'Spartan', sans-serif;
+  --dark-100: #242834;
+  --dark-200: #1C1E27;
+  --dark-300: #131521;
 }

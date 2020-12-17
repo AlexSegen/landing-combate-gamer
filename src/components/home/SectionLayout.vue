@@ -1,5 +1,5 @@
 <template>
-<section :id="elementId" class="cg__section cg__section __home">
+<section :id="elementId" class="cg__section cg__section __home" :class="section">
     <div :class="containerFluid ? 'container-fluid': 'container'">
         <div class="row">
             <div class="col-sm-12">
@@ -26,6 +26,6 @@
 <script>
 export default {
     name: "SectionLayout",
-    props: ["elementId", "title", "subtitle", "isCentered", "containerFluid"], 
+    props: ["elementId", "title", "subtitle", "isCentered", "containerFluid", "section"], 
 }
 </script>
