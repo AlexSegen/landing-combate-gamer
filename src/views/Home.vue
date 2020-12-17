@@ -5,13 +5,11 @@
     <Hero/>
 
     <section-layout elementId="about" >
-      <template v-slot:title>
-          <h2 class="cg__section-title __align"><small>Bienvenido a <strong class="text-primary">Combate Gamer</strong></small> <br>
-                ¿De qué trata?</h2>
-      </template>
       <template v-slot:description>
           <div class="row">
             <div class="col-sm-6">
+                <h2 class="cg__section-title __align"><small>Bienvenido a <strong class="text-primary">Combate Gamer</strong></small> <br>
+                ¿De qué trata?</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, at numquam. Facere repudiandae at dolor atque quisquam, consectetur laborum animi quae assumenda vel illo obcaecati debitis quia nostrum, rerum hic.</p>
 
                 <div class="cg__plus">

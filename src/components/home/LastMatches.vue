@@ -48,7 +48,7 @@ export default {
   &__matches {
     max-width: 900px;
     position: relative;
-    margin: 10px auto 50px;
+    margin: 10px auto;
     padding-top: 150px;
 
     &:after {
