@@ -114,7 +114,8 @@ export default {
         &-tab {
             background: #102222;
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
             margin: 0 5px;
             text-transform: uppercase;
             font-weight: 600;
@@ -134,6 +135,7 @@ export default {
         &-item {
             max-width: 300px;
             padding: 15px;
+            margin: 5px;
             margin: 20px 0;
             background: rgba(#102222, .7);
             transition: all ease-in-out .2s;

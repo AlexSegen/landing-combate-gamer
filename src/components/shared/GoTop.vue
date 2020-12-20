@@ -1,5 +1,5 @@
 <template>
-    <a href="#top" class="cg__gt" :class="{ 'show': isVisible}">
+    <a href="#top" class="cg__gt" :class="{ 'show': isScrolling}">
         <div>
             <i class="zmdi zmdi-chevron-up"></i>
             <span>Arriba</span>
@@ -9,26 +9,7 @@
 <script>
 export default {
     name: "GoTop",
-    data() {
-        return {
-            isVisible: false
-        }
-    },
-    mounted() {
-        const _this = this;
-        window.onscroll = function() {
-            _this.detectScroll()
-        };
-    },
-    methods: {
-        detectScroll() {
-            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-                this.isVisible = true;
-            } else {
-                this.isVisible = false;
-            }
-        }
-    }
+    props: ['isScrolling']
 }
 </script>
 <style lang="scss" scoped>

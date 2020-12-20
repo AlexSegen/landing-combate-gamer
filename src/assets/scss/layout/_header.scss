@@ -5,10 +5,38 @@
   &__header {
     color: #fff;
     background: $dark-300;
-
+    transition: all ease-in-out .2s;
 
     &.__isSmall {
-    
+      top: 0;
+      z-index: 5;
+      width: 100%;
+      position: fixed;
+
+      .cg__header {
+        &-top {
+          padding: 5px;
+        }
+  
+        &-brand {
+          height: 30px;
+            a {
+              img {
+                max-width: 60%;
+                padding: 10px;
+              }
+            }
+        }
+        &-nav {
+          > li {
+            > a {
+              padding: 5px 15px;
+            }
+          }
+  
+        }
+      }
+
     }
 
 
@@ -70,6 +98,7 @@
       z-index: 1;
       position: relative;
       background: $dark-300;
+      transition: all ease-in-out .2s;
       border-bottom: 1px solid rgba(204, 204, 204, 0.07);
       &-container {
         display: flex;
@@ -233,6 +262,7 @@
           height: auto;
           display: block;
           margin: 0 auto;
+          transition: all ease-in-out .2s;
         }
       }
 

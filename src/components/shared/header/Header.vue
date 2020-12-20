@@ -62,26 +62,13 @@ export default {
     name: "cgHeader",
     components: { SocialNetwork },
     mixins: [ clickaway ],
+    props: ['isScrolling'],
     data() {
         return {
-            isOpen: false,
-            isScrolling: false
+            isOpen: false
         }
     },
-    mounted() {
-        const _this = this;
-        window.onscroll = function() {
-            _this.detectScroll()
-        };
-    },
     methods: {
-        detectScroll() {
-            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-                this.isScrolling = true;
-            } else {
-                this.isScrolling = false;
-            }
-        },
         toggleNav() {
             this.isOpen = !this.isOpen;
         },
