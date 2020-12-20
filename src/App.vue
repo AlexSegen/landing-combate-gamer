@@ -22,7 +22,7 @@ export default {
   },
   methods: {
       detectScroll() {
-          if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+          if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
               this.isScrolling = true;
           } else {
               this.isScrolling = false;

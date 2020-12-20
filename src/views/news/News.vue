@@ -27,7 +27,7 @@
         </template>
 
         <div class="cg__news-grid">
-            <template v-for="(item, index) in news">
+            <template v-for="(item, index) in posts">
                 <NewsItem :data="item" :key="'news_'+index" />
             </template>
         </div>
@@ -56,7 +56,7 @@ export default {
     props: ['title', 'hasSidebar'],
     data() {
         return {
-            news: News,
+            posts: News,
             players: TopPlayers
         }
     },

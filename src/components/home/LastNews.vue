@@ -15,7 +15,7 @@
     
 </template>
 <script>
-import { News } from '@/services/mockup';
+import { LastNews } from '@/services/mockup';
 
 import NewsItem from '@/components/shared/NewsItem'
 export default {
@@ -23,11 +23,8 @@ export default {
     components: { NewsItem },
     data() {
         return {
-            news: News
+            news: LastNews
         }
-    },
-    created() {
-        this.news = News.splice(0,4);
     }
 }
 </script>
