@@ -18,9 +18,9 @@
                     <a href="#" class="cg__header-mobile-btn" type="button">
                         <i class="zmdi zmdi-account-circle text-primary"></i>
                     </a>
-                    <a class="cg__header-mobile-brand" href="#">
+                    <router-link class="cg__header-mobile-brand" :to="{ name: 'Home'}">
                         <img src="@/assets/img/logo-gc.png" alt="Combate Gamer">
-                    </a>
+                    </router-link>
                     <button
                     class="cg__header-mobile-btn"
                     type="button"
@@ -35,19 +35,19 @@
         <div class="cg__header-bottom" :class="{'__isOpen': isOpen}">
             <div class="container cg__header-bottom-container">
                 <ul class="cg__header-nav">
-                    <li><a href="/">Inicio</a></li>
+                    <li><router-link :to="{ name: 'Home'}">Inicio</router-link></li>
                     <li><a href="/#about">¿De qué trata?</a></li>
-                    <li><a href="/noticias">Noticias</a></li>
+                    <li><router-link :to="{ name: 'News' }">Noticias</router-link></li>
                 </ul>
                 <div class="cg__header-brand">
-                    <a href="#">
+                    <router-link :to="{ name: 'Home'}">
                         <img class="cg__header-brand-logo" src="@/assets/img/logo-gc.png" alt="Combate Gamer">
-                    </a>
+                    </router-link>
                 </div>
                 <ul class="cg__header-nav">
                     <li><a href="/#top-games">Top Juegos</a></li>
                     <li><a href="/#top-players">Top Jugadores</a></li>
-                    <li><a href="/ranking-general">Ranking General</a></li>
+                    <li><router-link :to="{ name: 'Ranking' }">Ranking General</router-link></li>
                 </ul>
                 <SocialNetwork :showOnMobile="true"/>
             </div>

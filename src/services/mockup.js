@@ -190,6 +190,18 @@ export const News = [
         media: "https://overworld.qodeinteractive.com/wp-content/uploads/2019/10/blog-pinterest-img-10.jpg",
         meta: "Octubre 01, 2020"
     },
+    {
+        title: "20+ Nuevos juegos agregados",
+        category: "General",
+        media: "https://overworld.qodeinteractive.com/wp-content/uploads/2019/10/blog-pinterest-img-10.jpg",
+        meta: "Octubre 01, 2020"
+    },
+    {
+        title: "Week'nd Winners",
+        category: "Evento",
+        media: "https://overworld.qodeinteractive.com/wp-content/uploads/2019/10/blog-pinterest-img-7.jpg",
+        meta: "Diciembre 16, 2020"
+    },
 ]
 
 export const TopPlayers = [

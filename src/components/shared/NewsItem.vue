@@ -1,54 +1,24 @@
 <template>
-<div class="cg__news">
-
-    <div class="cg__news-tools">
-        <router-link :to="{ name: 'News' }" class="btn btn-link text-white">Ver todas <i class="zmdi zmdi-arrow-right ml-1"></i></router-link>
-    </div>
-
-    <div class="cg__news-grid">
-        <template v-for="(item, index) in news">
-            <NewsItem :data="item" :key="'news_'+index" />
-        </template>
-    </div>
-
-</div>
-    
+    <router-link :to="{ name: 'NewsDetails' }" class="cg__news-item">
+        <div class="cg__news-item-details">
+            <span class="n__badge">{{data.category}}</span>
+            <h2 class="n__title">{{data.title}}</h2>
+            <div class="n__metas">
+                {{data.meta}}
+            </div>
+        </div>           
+        <img class="cg__news-item-media" :src="data.media" :alt="data.title">
+    </router-link>
 </template>
 <script>
-import { News } from '@/services/mockup';
-
-import NewsItem from '@/components/shared/NewsItem'
 export default {
-    name: "LastNews",
-    components: { NewsItem },
-    data() {
-        return {
-            news: News
-        }
-    },
-    created() {
-        this.news = News.splice(0,4);
-    }
+    name: "NewsItem",
+    props: ["data"]
 }
 </script>
 <style lang="scss" scoped>
 .cg {
     &__news {
-        &-tools {
-            text-align: right;
-            padding: 10px 15px;
-        }
-        &-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 15px;
-            margin: 5px 0 30px;
-
-            @media(max-width: 768px) {
-                grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-            }
-        }
-
         &-item {
             position: relative;
             display: block;
@@ -103,7 +73,6 @@ export default {
                 }
             }
         }
-
     }
 }
 </style>

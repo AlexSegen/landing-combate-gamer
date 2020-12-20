@@ -1,0 +1,44 @@
+.cg {
+  &__sidebar {
+    min-height: 90vh;
+
+/*     &-body {
+    }
+ */
+    &-search {
+        padding: 15px;
+        margin-bottom: 20px;
+        background: var(--dark-200);
+        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+
+      .cg__field-control {
+        height: 3rem;
+        background: var(--dark-200);
+        border-color: transparent;
+      }
+      .__icon {
+        font-size: 2rem;
+        background: var(--dark-200);
+        //border-color: var(--dark-200);
+        border-color: transparent;
+      }
+    }
+
+    &-widged {
+        padding: 10px;
+        background: var(--dark-200);
+        margin-bottom: 20px;
+        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+        .__title {
+            color: #eee;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-family: var(--text-header-stack);
+            padding: 5px;
+            margin: 0 0 5px;
+            border-bottom: 2px solid var(--dark-100);
+        }
+    }
+  }
+}

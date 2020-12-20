@@ -11,7 +11,7 @@
 
             <div class="cg__tg-carousel" >
 
-                <slick class="cg__hero-slick-" ref="slick":options="slickOptions">
+                <slick class="cg__hero-slick-" ref="slick" :options="slickOptions">
                     <div v-for="(g, index) in games" :key="'index_tg'+index" class="cg__tg-item">
                         <div class="tg__item-platform">{{g.platform}}</div>
 

@@ -1,0 +1,61 @@
+.cg {
+  &__news {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 15px;
+    }
+  }
+
+  &__cats {
+    &-list {
+      margin: 10px;
+      > a {
+        font-size: 1rem;
+        display: block;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all ease-in-out .15s;
+        font-family: var(--text-header-stack);
+        &.__active,
+        &:hover, &:focus {
+          background: var(--dark-100);
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    margin: 40px 0;
+    .page-item {
+
+      .page-link {
+        color: var(--primary);
+        background: var(--dark-200);
+        border-color: var(--dark-200);
+
+        &:hover, &:focus {
+          background: var(--dark-100);
+          border-color: var(--dark-100);
+        }
+      }
+
+      &.disabled {
+
+      }
+
+      &.active {
+
+        .page-link {
+          color: #fff;
+          background: var(--primary);
+          border-color: var(--primary);
+        }
+
+      }
+    }
+
+  }
+}

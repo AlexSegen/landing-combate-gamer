@@ -11,6 +11,21 @@ const routes = [
     component: Home
   },
   {
+    path: '/noticias',
+    name: 'News',
+    component: () => import('../views/news/News.vue')
+  },
+  {
+    path: '/noticias/post-example',
+    name: 'NewsDetails',
+    component: () => import('../views/news/NewsDetails.vue')
+  },
+  {
+    path: '/ranking-general',
+    name: 'Ranking',
+    component: () => import('../views/ranking/Ranking.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

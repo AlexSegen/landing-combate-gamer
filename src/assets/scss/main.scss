@@ -23,17 +23,21 @@
 // 4. Layout-related sections
 @import
   'layout/header',
+  'layout/page',
+  'layout/sidebar',
   'layout/footer';
 
 // 5. Components
 @import
   'components/slick-slider',
   'components/cg-buttons',
+  'components/cg-inputs',
   'components/button';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/news';
 
 // 7. Themes
 @import

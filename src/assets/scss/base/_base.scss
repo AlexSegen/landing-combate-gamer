@@ -39,35 +39,57 @@ a {
 }
 
 body {
- font-family: $text-font-stack;
- color: $text-color;
- font: normal 100% / 1.4 $text-font-stack;
- background: $body-background;
- background-size: cover;
- background-repeat: no-repeat;
+  font-family: $text-font-stack;
+  color: $text-color;
+  font: normal 100% / 1.4 $text-font-stack;
+  background: $body-background;
+  background-size: cover;
+  background-repeat: no-repeat;
 
- @media(max-width: 768px) {
-   padding-top: 50px;
- }
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
 }
-h1,h2,h3,h4,h5,h6 {
-   font-family:$text-header-stack;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $text-header-stack;
 }
 
 a {
-   color: $brand-color;
+  color: $brand-color;
 }
 
+@mixin bg-properties($size, $position, $repeat) {
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
 
 .cg {
   &__bg {
     width: 100%;
     min-height: 100vh;
+    z-index: -1;
+    top: 0;
     position: absolute;
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
-    background: transparent url('/img/bg/01.png');
-    opacity: .5;
+    background: transparent url("/img/bg/01.png");
+    opacity: 0.5;
+    &.__alt {
+      &-a {
+        background: transparent url("/img/bg/02.png");
+        @include bg-properties(cover, top, no-repeat);
+      }
+      &-b {
+        background: transparent url("/img/bg/03.png");
+        @include bg-properties(cover, top, no-repeat);
+      }
+    }
   }
 }

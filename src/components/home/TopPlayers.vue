@@ -2,23 +2,7 @@
     <div class="cg__tp">
         <div class="row p-0">
             <div class="col-sm-6">
-                <div class="cg__tp-grid">
-                    <div v-for="(p, index) in players" :key="'players'+index" class="tp__item">
-                        <div class="tp__item-position">{{index + 1}}</div>
-                        <div class="tp__item-box">
-                            <div class="tp__item-media">
-                                <img :src="p.media" alt="">
-                            </div>
-                            <div class="tp__item-details">
-                                <div class="tp__item-details-name">{{p.name}}</div>
-                                <ul class="tp__item-details-metas">
-                                    <li>{{p.level}}</li>
-                                    <li>{{p.wins}}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
+                <TopPlayersList :players="players"/>
             </div>
 
             <div class="col-sm-6">
@@ -33,9 +17,11 @@
 <script>
 
 import {TopPlayers} from '@/services/mockup';
+import TopPlayersList from '@/components/shared/TopPlayersList'
 
 export default {
     name: "TopPlayers",
+    components: { TopPlayersList },
     data() {
         return {
             players: TopPlayers
@@ -60,7 +46,7 @@ export default {
             }
         }
         
-        .tp {
+      /*   .tp {
             &__item {
                 display: flex;
                 justify-content: space-between;
@@ -185,7 +171,7 @@ export default {
 
                 }
             }
-        }
+        } */
     }
 }
 </style>

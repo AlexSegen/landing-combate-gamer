@@ -1,0 +1,20 @@
+.cg {
+    &__field {
+        &-control {
+            color: var(--primary);
+            background: var(--dark-300);
+            border-color: var(--dark-200);
+            border-radius: 0;
+
+            &:focus {
+                color: var(--primary);
+                border-color: var(--dark-200);
+                background: var(--dark-200);
+                box-shadow: none;
+            }
+            &::placeholder {
+                color: #666;
+            }
+        }
+    }
+}
