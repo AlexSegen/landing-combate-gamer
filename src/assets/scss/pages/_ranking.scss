@@ -1,0 +1,55 @@
+.cg {
+    &__ranking {
+        padding: 20px;
+        background: var(--dark-300);
+        clip-path: polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));
+
+        .table {
+            color: #eee;
+            > thead {
+                > {
+                    tr {
+                        > th {
+                            color: var(--primary);
+                            font-size: .9rem;
+                            text-transform: uppercase;
+                            font-family: var(--text-header-stack);
+                        }
+                    }
+                }
+            }
+
+            > tbody {
+                > {
+                    tr {
+
+                        &:hover, &:focus {
+                            color: #eee!important;
+                        }
+
+                        > td {
+                            font-size: .9rem;
+                            vertical-align: middle;
+                            padding: 15px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__rplayer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+        }
+        &-name {
+
+        }
+    }
+}

@@ -59,6 +59,7 @@ $dark: $gray-800 !default;
 $dark-100:  #242834;
 $dark-200:  #1C1E27;
 $dark-300:  #131521;
+$dark-900: #0a0b13;
 
 // Container's maximum width
 /// @type Length
@@ -88,4 +89,5 @@ $base-url: '/assets/' !default;
   --dark-100: #242834;
   --dark-200: #1C1E27;
   --dark-300: #131521;
+  --dark-900: #0a0b13;
 }
